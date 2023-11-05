@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Redactr Pro</title>
+      <link href="style.css" rel="stylesheet">
+      <script src="index.js" defer></script>
+   </head>
+   <body>
+      <main class="main">
+        <section class="form">
+            <h2>Word Scrambler</h2>
+            <form onsubmit="getFormInputs(event)">
+               <div class="form-group">
+                  <label for="text">Your Message:</label>
+                  <textarea id="text" name="text" rows="4" required></textarea>
+               </div>
+             <div class="form-group">
+                <label for="word">Word(s) to scramble(Separate using a space):</label>
+                <input type="text" id="word" name="word" required>
+             </div> 
+             <div class="form-group">
+                <label for="pattern">Enter a masking pattern e.g(#,*,^ etc):</label>
+                <input type="text" id="pattern" name="pattern" required maxlength="1">
+             </div>
+
+             <div class="form-group">
+                <button type="submit">Redact Now</button>
+             </div>  
+            </form>
+   
+         </section>   
+
+         <article id="output">
+            <h2> Scrambled Output</h2>
+            <hr>
+            <div>
+              <p id="scramble"></p>
+              <ul id="analytics"></ul>
+            </div>
+         </article>
+      </main>
+      
+      <footer>
+         <p>&copy; 2023 GM Suigeneris</p>
+      </footer>
+   </body>
+</html>
