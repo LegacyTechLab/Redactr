@@ -36,7 +36,7 @@ function scrambleWords(textToSramble,sensitiveWords,replacement){
     document.getElementById("output").style.display = "block"
     document.getElementById("scramble").innerText = textToSramble
     document.getElementById("analytics").innerHTML = `
-    <li>This took ${timeTaken/1000} seconds</li>
+    <li>This took ${Math.ceil(timeTaken/1000)} seconds</li>
     <li>${wordsScanned.length} words were scanned</li>
     <li>${charactersScrambled} characters were scrambled</li>
     <li>${wordsMatched} word(s) matched for scrambling</li>
